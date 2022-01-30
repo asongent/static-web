@@ -58,7 +58,7 @@ jobs:
           snyk code test || true
       - name: Snyk Container # Rename your image, for testing and failing please add snyk container test before snyk container monitor
         run: |
-          docker build -t {{ secrets.APP_NAME }}:latest .
+          docker build . --tag {{ secrets.APP_NAME }}:latest .
            snyk container monitor {{ secrets.APP_NAME }}:latest --file=Dockerfile
       - name: Snyk IaC # Remove || true to fail if there are vulnerabilities
         run: |
