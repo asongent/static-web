@@ -3,7 +3,8 @@ name: CI task for PROD branch
 
 on:
   pull_request:
-    branches: [ PROD ]
+    branches: 
+    - 'master'
 
 jobs:
   # build_app:
