@@ -1,4 +1,3 @@
-
 pipeline {
   agent any
   stages {
@@ -8,7 +7,7 @@ pipeline {
         DOCKER_PASSWORD = 'Marvelous2014'
       }
       steps {
-        sh 'docker build . -t test:v0'
+        sh 'docker build -t test .'
       }
     }
 
