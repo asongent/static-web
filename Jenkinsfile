@@ -7,13 +7,15 @@ pipeline {
         DOCKER_PASSWORD = 'Marvelous2014'
       }
       steps {
-        sh 'docker build -t test .'
+        sh '''docker build -t test .
+
+'''
       }
     }
 
-    stage('scan') {
+    stage('tag') {
       steps {
-        sh 'trivy image test'
+        sh 'docker tag test jmugu/static-web:v0'
       }
     }
 
