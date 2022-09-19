@@ -7,7 +7,7 @@ pipeline {
         DOCKER_PASSWORD = 'Marvelous2014'
       }
       steps {
-        sh 'docker '
+        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
       }
     }
 
