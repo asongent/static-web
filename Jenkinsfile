@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('tag') {
+      steps {
+        sh ' docker tag test jmugu/static-web:v0'
+      }
+    }
+
   }
 }
