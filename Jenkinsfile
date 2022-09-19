@@ -11,5 +11,11 @@ pipeline {
       }
     }
 
+    stage('scan') {
+      steps {
+        sh 'trivy image test'
+      }
+    }
+
   }
 }
