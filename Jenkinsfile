@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('comit') {
+    stage('login') {
+      environment {
+        DOCKER_USERNAME = 'jmugu'
+        DOCKER_PASSWORD = 'Marvelous2014'
+      }
       steps {
-        sh 'git pull -b dev https://github.com/asongent/static-web.git'
+        sh 'docker '
       }
     }
 
