@@ -13,9 +13,9 @@ pipeline {
       }
     }
 
-    stage('tag') {
+    stage('scan') {
       steps {
-        sh 'docker tag test jmugu/static-web:v0'
+        sh 'trivy image test'
       }
     }
 
