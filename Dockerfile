@@ -1,5 +1,5 @@
-# FROM nginx:alpine
-FROM nginx
+FROM nginx:alpine
+# FROM nginx
 WORKDIR /static-web
 EXPOSE 80
 COPY . .
