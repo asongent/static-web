@@ -8,7 +8,7 @@ pipeline {
       }
       steps {
         sh '''cd static-web
-d
+
 docker build -t test .'''
       }
     }
