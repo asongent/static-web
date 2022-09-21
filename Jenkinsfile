@@ -13,7 +13,7 @@ pipeline {
 
     stage('scan') {
       steps {
-        sh 'trivy --no-progress --exit-code 1 --severity HIGH,CRITICAL test'
+        sh 'trivy --no-progress --exit-code 1 --severity HIGH,CRITICAL jmugu/static-web'
       }
     }
 
