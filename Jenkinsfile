@@ -7,7 +7,7 @@ pipeline {
         DOCKER_PASSWORD = 'Marvelous2014'
       }
       steps {
-        sh 'docker build -t test .'
+        sh 'docker build -t jmugu/stactic-web .'
       }
     }
 
@@ -20,6 +20,12 @@ pipeline {
     stage('tag') {
       steps {
         sh ' docker tag test jmugu/static-web:v0'
+      }
+    }
+
+    stage('login') {
+      steps {
+        sh 'docker login -u jmugu -p passs'
       }
     }
 
