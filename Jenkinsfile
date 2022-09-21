@@ -7,9 +7,7 @@ pipeline {
         DOCKER_PASSWORD = 'Marvelous2014'
       }
       steps {
-        sh '''cd static-web
-
-docker build -t test .'''
+        sh 'docker build -t test .'
       }
     }
 
